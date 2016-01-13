@@ -14,6 +14,13 @@ $(document).ready(function () {
         i = i+1;
     }
 
+$("td").click(function (ev) {
+    
+    $(ev.target).addClass("x").text("x");
+    
+});
+
+console.log("hello")
     // 1. When you click on a square, that square should be marked
     // 2. Keep track of the squares used; don't let the player move in a used square
     // 3. Detect when the game is won.
