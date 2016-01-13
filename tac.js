@@ -16,13 +16,19 @@ $(document).ready(function () {
 
 $("td").click(function (ev) {
     
+    var id = $(ev.target).attr("id");
+    if (board[id[0]][id[1]] == 0) {
+        board[id[0]][id[1]] = player;
+
     if (player == 1) {
         $(ev.target).addClass("x").text("x");
     } else {
         $(ev.target).addClass("o").text("o");
     }
+ 
     player *= -1;
     
+    }
 });
 
 console.log("hello")
