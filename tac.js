@@ -16,7 +16,12 @@ $(document).ready(function () {
 
 $("td").click(function (ev) {
     
-    $(ev.target).addClass("x").text("x");
+    if (player == 1) {
+        $(ev.target).addClass("x").text("x");
+    } else {
+        $(ev.target).addClass("o").text("o");
+    }
+    player *= -1;
     
 });
 
